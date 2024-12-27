@@ -47,6 +47,8 @@ public class SettingsMenu : MonoBehaviour
         LoadFullScreenData();
         LoadSoundData();
 
+        LoadGamepadSensitivityData();
+        LoadMouseSensitivityData();
         LoadViewFPSToogleData();
     }
 
@@ -140,7 +142,7 @@ public class SettingsMenu : MonoBehaviour
 
     private void LoadGamepadSensitivityData()
     {
-        soundSlider.value = PlayerPrefs.GetFloat("Volume", 0);
+        gamepadSensitivitySlider.value = PlayerPrefs.GetFloat("GamepadSensitivity", 1.5f);
     }
 
     // Set MouseResolution
@@ -152,7 +154,10 @@ public class SettingsMenu : MonoBehaviour
         PlayerPrefs.SetFloat("MouseSensitivity", sensitivity);
     }
 
-
+    private void LoadMouseSensitivityData()
+    {
+        mouseSensitivitySlider.value = PlayerPrefs.GetFloat("MouseSensitivity", 1.5f);
+    }
 
     public void SetViewFPS(bool isViewFPS)
     {

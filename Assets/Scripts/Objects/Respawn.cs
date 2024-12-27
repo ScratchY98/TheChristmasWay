@@ -18,7 +18,7 @@ public class Respawn : MonoBehaviour
             GoToRespawnPoint();
     }
 
-    private void GoToRespawnPoint()
+    public void GoToRespawnPoint()
     {
         transform.position = respawnPos;
         transform.rotation = respawnRot;

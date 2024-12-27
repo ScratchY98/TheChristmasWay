@@ -1,0 +1,2 @@
+C:\Users\Noam\Documents\Unity-Project\Others\TheChristmasWay\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\src\main\cpp\CMakeLists.txt
+C:\Users\Noam\Documents\Unity-Project\Others\TheChristmasWay\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\src\main\cpp\GameActivity\CMakeLists.txt

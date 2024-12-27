@@ -25,6 +25,10 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float maxSlopeAngle = 50f;
     [SerializeField] private float slopeHelpY;
 
+    [Header("Mobile")]
+    [SerializeField] private MobileUI mobileUI;
+    [SerializeField] private Joystick joystick;
+
 
     private Vector3 inputDirection;
     private bool canMove;
@@ -47,12 +51,16 @@ public class PlayerMovement : MonoBehaviour
         velocityMultiplier = isGrounded ? groundVelocityMultiplier : airVelocityMultiplier;
         rb.linearDamping = isGrounded ? groundDrag : airDrag;
 
-        Vector2 input = playerInput.actions["Move"].ReadValue<Vector2>();
-
         isRunning = playerInput.actions["Sprint"].IsPressed();
         speed = isRunning ? sprintSpeed : walkSpeed;
 
-        if (isGrounded && playerInput.actions["Jump"].triggered)
+        if (playerInput.actions["Jump"].triggered)
+            Jump();
+    }
+
+    public void Jump()
+    {
+        if (isGrounded)
             rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
     }
 
@@ -79,7 +87,7 @@ public class PlayerMovement : MonoBehaviour
         if (!canMove)
             return;
 
-        Vector2 input = playerInput.actions["Move"].ReadValue<Vector2>();
+        Vector2 input = mobileUI.isMobile ? new Vector2(joystick.Horizontal, joystick.Vertical) : playerInput.actions["Move"].ReadValue<Vector2>();
         inputDirection = new Vector3(input.x, 0f, input.y).normalized;
 
         if (inputDirection.magnitude < 0.1f)

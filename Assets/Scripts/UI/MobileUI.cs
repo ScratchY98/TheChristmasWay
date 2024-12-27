@@ -3,9 +3,10 @@ using UnityEngine;
 public class MobileUI : MonoBehaviour
 {
     [SerializeField] private GameObject mobileUI;
+    /*[HideInInspector]*/ public bool isMobile;
     private void Start()
     {
-        bool isMobile = false;
+        isMobile = false;
 
         if (IsMobile.staticIsWebGL)
             isMobile = IsMobile.isMobile;

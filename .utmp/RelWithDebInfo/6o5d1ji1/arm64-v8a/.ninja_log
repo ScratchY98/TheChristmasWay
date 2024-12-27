@@ -1,0 +1,10 @@
+# ninja log v5
+88	1723	7570142382821127	GameActivity/CMakeFiles/game.dir/UGAInputKeyEvent.cpp.o	9e5c3451f9358d24
+102	1744	7570142383082660	GameActivity/CMakeFiles/game.dir/UGAEntry.cpp.o	5082f7a5f00644b4
+60	1758	7570142383236596	GameActivity/CMakeFiles/game.dir/UGAConfiguration.cpp.o	14518ff618f3ed50
+119	1814	7570142383807713	GameActivity/CMakeFiles/game.dir/UGAInputMotionEvent.cpp.o	97648d6ec20b8164
+131	1932	7570142385011562	GameActivity/CMakeFiles/game.dir/UGASoftKeyboard.cpp.o	8d6ff36192eb1053
+1	2030	7570142386005349	GameActivity/CMakeFiles/game.dir/UGADebug.cpp.o	68724baa1f1e692f
+79	2209	7570142387757071	GameActivity/CMakeFiles/game.dir/UGAInput.cpp.o	bad1da3f90154afe
+68	2514	7570142390833854	GameActivity/CMakeFiles/game.dir/UGAApplication.cpp.o	36a197b04364703
+2515	2730	7570142392938874	C:/Users/Noam/Documents/Unity-Project/Others/TheChristmasWay/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/RelWithDebInfo/6o5d1ji1/obj/arm64-v8a/libgame.so	efc4f38f67d8d8ec

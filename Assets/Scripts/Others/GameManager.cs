@@ -20,6 +20,8 @@ public class GameManager : MonoBehaviour
     [Header("Scene Changements Settings")]
     [SerializeField] private string nextLevelName = "Level";
 
+    [SerializeField] Respawn playerRespawn;
+
     // Singelton
     public static GameManager instance;
 
@@ -78,4 +80,6 @@ public class GameManager : MonoBehaviour
 
         Debug.Log("Scène chargée avec succès !");
     }
+
+    public void Respawn() { playerRespawn.GoToRespawnPoint(); }
 }

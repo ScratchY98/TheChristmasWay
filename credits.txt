@@ -6,3 +6,5 @@ Skybox : https://assetstore.unity.com/packages/vfx/shaders/free-skybox-extended-
 Fonts (Rowdies) : https://fonts.google.com/specimen/Rowdies
 
 UI Kit : https://kenney.nl/assets/ui-pack-pixel-adventure
+
+Joystick : https://assetstore.unity.com/packages/tools/input-management/joystick-pack-107631

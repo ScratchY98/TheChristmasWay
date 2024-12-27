@@ -18,12 +18,19 @@ public class PlayerCamera : MonoBehaviour
     [Header("Input Settigs")]
     [SerializeField] private PlayerInput playerInput;
 
+    [Header("Mobile")]
+    [SerializeField] private MobileUI mobileUI;
+    [SerializeField] private Joystick joystick;
+
     // Rotations settings
     private Vector2 rotation;
 
     private void Start()
     {
         Cursor.lockState = CursorLockMode.Locked;
+
+        ChangeSensitivity(PlayerPrefs.GetFloat("GamepadSensitivity", 1.5f), true);
+        ChangeSensitivity(PlayerPrefs.GetFloat("MouseSensitivity", 1.5f), false);
     }
 
     private void LateUpdate()
@@ -31,7 +38,7 @@ public class PlayerCamera : MonoBehaviour
 
         float sensitivity = playerInput.currentControlScheme == "Keyboard" ? mouseSensitivity : gamepadSensitivity;
 
-        Vector2 lookInput = playerInput.actions["Look"].ReadValue<Vector2>();
+        Vector2 lookInput = mobileUI.isMobile ? new Vector2(joystick.Horizontal, joystick.Vertical) : playerInput.actions["Look"].ReadValue<Vector2>();
 
         // Appliquer la vitesse de rotation
         Vector2 lookOutput = new Vector2(lookInput.x * sensitivity, lookInput.y * sensitivity) * rotationSpeed * Time.deltaTime;
